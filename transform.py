@@ -52,13 +52,8 @@ def find_organisation(row: Doc) -> str:
 
 
 if __name__=="__main__":
-    time_now = datetime.now()
-    print(f"Time started is {time_now}")
     data = pd.read_csv("data.csv")
     countries_data = pd.read_json("countries.json")["name"]
     get_new_columns(data, countries_data)
-    time_after = datetime.now()
     remove("data.csv")
-    difference_time = time_after-time_now
-    print(f"Time difference is {difference_time.total_seconds()}s or {difference_time.seconds/60}m")
 
