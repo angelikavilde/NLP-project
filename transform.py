@@ -53,7 +53,7 @@ def get_new_columns(data_frame: DataFrame, countries_df: DataFrame) -> None:
     data_frame["AffiliationMatchedGRID"] = data_frame.apply(
         lambda row: get_organisation_from_csv(institutes_combined_df, row["Organisation"],
                     row["Country"], cache_dict) if row["Organisation"] is not None else None, axis=1)
-    data_frame.to_csv("/tmp/transformed_data.csv")
+    data_frame.to_csv("transformed_data.csv")
 
 def find_organisation(row: Doc) -> str:
     """Finds an organisation in the affiliations"""
