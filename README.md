@@ -27,22 +27,20 @@ The following code was adapted into a Dockerfile for the AWS lambda function whi
   }
 }
 ```
+--------
 
 <img src="https://github.com/angelikavilde/NLP-project/blob/main/screenshots/Screenshot%202023-08-23%20at%2013.49.09.png" width="440" height="400" alt="State machine on AWS showing an email upon the start of the machine and end with a lambda function that runs the pipeline">
 
+---------
 
 <img src="https://github.com/angelikavilde/NLP-project/blob/main/screenshots/Screenshot%202023-08-23%20at%2013.50.07.jpg" width="520" height="280" alt="Emails received from the state machine">
+
+---------
 
 ## To run the script
 
 `bash run_extract_transform.sh`
 
-
-
-
-
-
------------------------------------------
 -----------------------------------------
 List of countries was downloaded from:
 
