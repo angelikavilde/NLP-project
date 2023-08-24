@@ -8,6 +8,8 @@ Some of the code was then improved for shortened speed of running with the use o
 
 Later, `find_file.py` was added to track recently added files in the S3 bucket to retrieve only the recently added files of the correct file type and location.
 
+After which, `improve_matching.py` was created to find more possible matches. It checks manually found matches and changes the matched matches with them as they're more likely to be correct. It then runs through every affiliation for the rows without a matched grid id, labels the row and goes through not just the last one but now all of the labels that are set to be 'ORG' and matches all with an institute to return the best matching one for every row.
+
 ## AWS
 
 The following code was adapted into a Dockerfile for the AWS lambda function which was placed as a container into the AWS ECR and used within the state machine. The state machine shown below is shown to send an email upon starting the script and another one upon completion with an output from the lambda handler function located in the file `aws_lambda.py`. The state machine is activated using a trigger with set rule from AWS EventBridge once the correct file is added to the specified S3 bucket. The JSON for the configuration can be found below:
