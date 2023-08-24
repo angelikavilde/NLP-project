@@ -9,7 +9,7 @@ from rapidfuzz.process import extractOne
 
 
 def find_wrong_matches(true_grid: str, matched_grid: str) -> str | None:
-    """"""
+    """Returns a more appropriate GRID ID if exists"""
     if true_grid == "nan" and matched_grid == "nan":
         return None
     if true_grid == "nan" and matched_grid != "nan":
