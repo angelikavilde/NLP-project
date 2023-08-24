@@ -14,7 +14,8 @@ After which, `improve_matching.py` was created to find more possible matches. It
 
 The following code was adapted into a Dockerfile for the AWS lambda function which was placed as a container into the AWS ECR and used within the state machine. The state machine shown below is shown to send an email upon starting the script and another one upon completion with an output from the lambda handler function located in the file `aws_lambda.py`. The state machine is activated using a trigger with set rule from AWS EventBridge once the correct file is added to the specified S3 bucket. The JSON for the configuration can be found below:
 
-```{
+```
+{
   "source": ["aws.s3"],
   "detail-type": ["Object Created"],
   "detail": {
